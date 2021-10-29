@@ -2,7 +2,9 @@
 Repositório para a entrega do exercício de S206 sobre teste de UI.
 
 Nome: Antônio Victor Mendes Fonseca
+
 Curso: GES
+
 Matrícula: 109
 
 Link para o site utilizado: https://www.futbin.com/
