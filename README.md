@@ -6,6 +6,7 @@ Curso: GES
 Matrícula: 109
 
 Link para o site utilizado: https://www.futbin.com/
+
 Link para a página do site utilizada nos testes: https://www.futbin.com/22/players
 
 Utilizei o site FUTBIN para a realização dos testes solicitados. O site trata-se de uma base de dados com os jogadores do jogo de video game Fifa com todos os jogadores e seus atributos. Para a realização dos testes utilizei especificamente da página de pesquisa do site, utilizando de seus diferentes filtros para obter diferentes resultados desejados.
@@ -22,6 +23,17 @@ Utilizei o site FUTBIN para a realização dos testes solicitados. O site trata-
 
  - Sexto caso de teste: Buscar por um zagueiro de natural de Togo que jogue na La Liga (Liga espanhola) - Utilizie dos filtros do site para buscar um jogador natural de Togo que jogasse na liga espanhola, tendo como resultado único o jogador Djené.
 
-Para executar o projeto basta realizar a cópia do repositório para sua máquina, acessá-lo utilizando o GIT BASH ou outra ferramenta similar, e utilizar o comando ./node_modules/.bin/cypress open.
+Para executar o projeto basta realizar a cópia do repositório para sua máquina, utilizar o comando npm install para instalar as dependencias do projeto, acessá-lo utilizando o GIT BASH ou outra ferramenta similar, e utilizar o comando ./node_modules/.bin/cypress open para abrir o cypress e poder executá-lo. Você pode também utilizar a linha de comando ./node_modules/.bin/cypress run --spec 'cypress/integration/testesUI/**/'.
+
+Já para gerar o relatório HTML basta segui os seguintes comandos:
+
+1. Adicionando as dependências necessárias para gerar o reporte de testes:
+npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator 
+	
+2. Fazendo merge dos arquivos .json gerados (Após a execução dos testes):
+npx mochawesome-merge "cypress/reports/*.json" > mochawesome.json 
+
+3. Gerando o HTML bonito com os reports:
+npx marge mochawesome.json 
 
 
